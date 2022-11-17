@@ -30,6 +30,7 @@ public class User {
     @JoinColumn(name = "bucket_id")
     private Bucket bucket;
 
+
     public void setId(Long id) {
         this.id = id;
     }
