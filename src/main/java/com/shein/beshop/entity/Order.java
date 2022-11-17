@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "order")
+@Table(name = "orders")
 public class Order {
     private final static String SEQ_NAME = "order_seq";
     @Id
@@ -35,7 +35,7 @@ public class Order {
     private User user;
     private BigDecimal sum;
     private String address;
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<OrderDetails>orderDetails = new java.util.ArrayList<>();
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
