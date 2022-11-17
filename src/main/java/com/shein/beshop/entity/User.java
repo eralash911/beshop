@@ -13,7 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
     private final static String SEQ_NAME = "user_seq";
     @Id
@@ -26,9 +26,9 @@ public class User {
     private  boolean archived;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @OneToOne(cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "bucket_id")
-    private Bucket bucket;
+//    @OneToOne(cascade = CascadeType.REMOVE)
+//    @JoinColumn(name = "id")
+//    private Bucket bucket;
 
 
     public void setId(Long id) {
