@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "buckets")
+@Table(name = "bucket")
 public class Bucket {
     private final static String SEQ_NAME = "bucket_seq";
     @Id
@@ -22,9 +22,9 @@ public class Bucket {
     @SequenceGenerator(sequenceName = SEQ_NAME, name = SEQ_NAME, allocationSize = 1)
     private Long id;
 //////////////////////////////////
-//    @OneToOne
-//    @JoinColumn(name = "user_id")
-//    private User user;
+    @OneToOne
+    @JoinColumn(name = "user_id")
+    private User user;
  ////////////////////////////////////////////////
 
     @ManyToMany(cascade = CascadeType.ALL)

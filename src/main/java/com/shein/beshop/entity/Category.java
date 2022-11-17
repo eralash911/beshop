@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "categories")
+@Table(name = "category")
 public class Category {
     private final static String SEQ_NAME = "category_seq";
     @Id

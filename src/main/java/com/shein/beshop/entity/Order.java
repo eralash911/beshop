@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "orders")
+@Table(name = "order")
 public class Order {
     private final static String SEQ_NAME = "order_seq";
     @Id

@@ -3,9 +3,9 @@ spring:
     database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
   datasource:
-    url: jdbc:postgresql://localhost:5432/db3
+    url: jdbc:postgresql://localhost:5432/db4
     username: postgres
     password: 112233qq
     driverClassName: org.postgresql.Driver
