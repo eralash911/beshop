@@ -22,8 +22,9 @@ public class Bucket {
     @SequenceGenerator(sequenceName = SEQ_NAME, name = SEQ_NAME, allocationSize = 1)
     private Long id;
 //////////////////////////////////
-    @OneToOne
-    @JoinColumn(name = "user_id")
+
+//    @JoinColumn(name = "user_id")
+    @OneToOne(mappedBy = "id")
     private User user;
  ////////////////////////////////////////////////
 
