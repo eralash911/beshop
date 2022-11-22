@@ -24,8 +24,8 @@ public class Bucket {
 //////////////////////////////////
 
 //    @JoinColumn(name = "user_id")
-    @OneToOne(mappedBy = "id")
-    private User user;
+//    @OneToOne(mappedBy = "id")
+//    private User user;
  ////////////////////////////////////////////////
 
     @ManyToMany(cascade = CascadeType.ALL)
