@@ -26,17 +26,12 @@ public class User {
     private  boolean archived;
     @Enumerated(EnumType.STRING)
     private Role role;
-//    @OneToOne(cascade = CascadeType.REMOVE)
-//    @JoinColumn(name = "bucket_id")
-//    private Bucket bucket;
+    @OneToOne(
+            mappedBy = "user",
+            cascade = CascadeType.REMOVE,
+            orphanRemoval = true,
+            fetch = FetchType.LAZY
+    )
+    private Bucket bucket;
 
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Id
-    public Long getId() {
-        return id;
-    }
 }

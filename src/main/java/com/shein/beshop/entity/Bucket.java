@@ -1,6 +1,5 @@
 package com.shein.beshop.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "buckets")
+@Table(name = "bucket")
 public class Bucket {
     private final static String SEQ_NAME = "bucket_seq";
     @Id
@@ -23,15 +22,17 @@ public class Bucket {
     private Long id;
 //////////////////////////////////
 
-//    @JoinColumn(name = "user_id")
-//    @OneToOne(mappedBy = "id")
-//    private User user;
- ////////////////////////////////////////////////
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @OneToOne (fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+    ////////////////////////////////////////////////
+//
+    @ManyToMany//(mappedBy = "bucket")
     @JoinTable(name = "buckets_products",
             joinColumns = @JoinColumn(name = "bucket_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id"))
     private List<Product>products;
 }
+
 

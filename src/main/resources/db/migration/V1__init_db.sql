@@ -1,1 +1,0 @@
-create table category (id integer not null, tittle varchar(255), primary key (id))
