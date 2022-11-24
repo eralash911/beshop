@@ -20,15 +20,10 @@ public class Bucket {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQ_NAME)
     @SequenceGenerator(sequenceName = SEQ_NAME, name = SEQ_NAME, allocationSize = 1)
     private Long id;
-//////////////////////////////////
-
-
     @OneToOne (fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
-    ////////////////////////////////////////////////
-//
-    @ManyToMany//(mappedBy = "bucket")
+    @ManyToMany
     @JoinTable(name = "buckets_products",
             joinColumns = @JoinColumn(name = "bucket_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id"))

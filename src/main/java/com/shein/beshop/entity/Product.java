@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "product")
+@Table(name = "products")
 public class Product {
     private final static String SEQ_NAME = "product_seq";
     @Id

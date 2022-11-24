@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "category")
 public class Category {
-    private final static String SEQ_NAME = "bucket_seq";
+    private final static String SEQ_NAME = "category_seq";
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQ_NAME)
     @SequenceGenerator(sequenceName = SEQ_NAME, name = SEQ_NAME, allocationSize = 1)
